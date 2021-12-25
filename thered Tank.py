@@ -150,6 +150,7 @@ class Game(arcade.Window):
             arcade.draw_text(text_final_score,0,300,arcade.color.WHITE,width=800,align='center') 
             text_final_level = f"LEVEL : {self.tank.level}"
             arcade.draw_text(text_final_level,0,250,arcade.color.GREEN,width=800,align='center') 
+
             self.stop_threads = True
             self.thread_robot.join()
     
@@ -193,7 +194,6 @@ class Game(arcade.Window):
     def on_key_release(self, key, modifiers):
         if key == arcade.key.RIGHT or arcade.key.LEFT:
             self.tank.change_angle = 0
-
 
 my_game = Game()
 my_game.center_window()
